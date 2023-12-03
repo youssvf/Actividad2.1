@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+*{
+    font-family: 'Lexend';
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+img{
+    width: auto;
+    height: 100%;
+}
+
+.navprincipal{
+    align-items: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.bloque{
+    width: 100%;
+    height: 100%;
+    background-image: url(image\ 1.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.marco{
+    padding: 40px;
+    width: 70%;
+    margin: 30px;
+    height: auto;
+    background-color: #dcdcdc;
+}
+
+.contenedorgrid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.etiquetas{
+    margin: 20px;
+}
+
+.upload{
+    text-align: center;
+}
+
+.botonpublicar{
+    text-align: center;
+}
+
+label{
+    font-size: larger;
+}
+
+select{
+    width: 80%;
+    font-size: larger;
+}
+
+button{
+    border-radius: 40%;
+    border: none;
+    width: 20%; 
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #7A7A7A;
+}
+
+@media (max-width:600px){
+    .contenedorgrid{
+        grid-template-columns: 100%;
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .navprincipal{
+        align-items: center;
+    }
+    
+    nav a{
+        text-decoration: none;
+        color: black;
+        font-size: 1em;
+    }
+}
+

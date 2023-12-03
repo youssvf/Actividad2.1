@@ -1,0 +1,75 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navprincipal{
+    align-items: center;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 2em;
+}
+
+.divcentral{
+    width: auto;
+    height: 100%;
+    padding: 130px;
+    justify-content: center; 
+    display: flex;      
+}
+
+body{
+    background-color: #f7f7f7;  
+    background-image: url(Sin\ título.png);
+    background-size: cover;
+}
+
+.etiquetas{
+    margin: 20px;
+}
+
+.marco{
+    padding: 40px;
+    width: 70%;
+    margin: 30px;
+    height: auto;
+    background-color: #dcdcdc;
+    justify-content: center ;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+label{
+    font-size: larger;
+}
+
+input{
+    width: 80%;
+    font-size: larger;
+}
+
+.botonpublicar{
+    text-align: center;
+}
+
+button{
+    border-radius: 40%;
+    border: none;
+    width: 20%; 
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #7A7A7A;
+}
+
+
