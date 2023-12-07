@@ -4,12 +4,6 @@
     font-family: 'Lexend';
 }
 
-
-
-nav{
-    display: flex;
-}
-
 #navmovil{
     margin: 10px 5px;
     display: flex;
@@ -138,7 +132,7 @@ h3{
     object-fit: fill;
 }
 
-.navabajo{
+.footer{
     margin: 10px;
     display: flex;
     flex-direction: row;flex: 1;
@@ -148,7 +142,7 @@ h3{
     font-size: large;
 }
 
-.navabajo a{
+.footer a{
     color: black;
 }
 
@@ -180,7 +174,7 @@ h3{
     grid-area: coches;
 }
 
-.navabajo{
+.footer{
     grid-area: footer;
 }
 

@@ -10,22 +10,26 @@
       </style>
 </head>
 <body>
-    <nav class="navprincipal">
+    <div class="logo">
         <img src="Rectangle_9__1_-removebg-preview.png">
+    </div>
+    <div id="navmovil">
         <a href="../inicio/coches.html">Inicio</a>
-        <a href="../publicarproducto/publicarproducto.html" style="text-decoration: underline;">Publicar Producto</a>
+        <a href="../publicarproducto/publicarproducto.html" style="text-decoration:underline;">Publicar Producto</a>
         <a href="../login/index.html">Cerrar Sesión</a>
-        <img src="user-regular (1) 1.png">
-    </nav>
+        <div class="usuario">
+            <img src="user-regular (1) 1.png">
+            <br>
+            <span>youssvf</span>
+        </div>
+    </div>
     <div class="bloque">
-        <!-- <div>
-            <img src="12_50.jpg" alt="foto">
-        </div> -->
         <div class="marco">
             <h1>
                 Nuevo producto
             </h1>
-            <div class="contenedorgrid">
+            <form action="../inicio/coches.html">
+                <div class="contenedorgrid"> 
                 <div class="etiquetas">
                     <label for="marcas">Marca</label><br>
                     <select name="marcas" id="marcas">
@@ -65,13 +69,21 @@
                     </select>
                 </div>
                 <div class="upload">
-                    <button><input type="file" name="imagen" id="imagen"></button>
-                    <button><img src="image-solid (1) 1.png" alt=""></button>
+                    <label for="imagen1" class="button subirimagen">
+                        <input type="file" name="imagen1" id="imagen1" style="display: none;">
+                    </label>
+                
+                    <label for="imagen2" class="button2 subirimagen2">
+                        <input type="file" name="imagen2" id="imagen2" style="display: none;">
+                    </label>
                 </div>
+                
             </div>
             <div class="botonpublicar">
-                <button class="botonpublicar">Publicar</button>
+                <button type="submit" class="botonpublicar">Publicar</button>
             </div>
+            </form>
+            
         </div>
     </div>
 </body>
