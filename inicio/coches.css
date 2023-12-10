@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
 
+
+/*selector universal*/
 *{
     font-family: 'Lexend';
 }
 
+/*selector de id*/
 #navmovil{
     margin: 10px 5px;
     display: flex;
@@ -12,6 +15,7 @@
     align-items: center;
 }
 
+/*selector hijo por id*/
 #navmovil a{
     text-decoration: none;
     color: black;
@@ -19,10 +23,17 @@
     font-weight: bold;
 }
 
+/* selector de pseudoclase */
+#navmovil a:hover {
+    text-decoration: underline;
+}
+
+/*selector de clase*/
 .usuario{
     text-align: center;
 }
 
+/*selector hijo por clase*/
 .usuario span{
     opacity: 0.5;
 }
@@ -66,11 +77,16 @@ hr{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-right: 20px; /* Ajusta el margen derecho según sea necesario */
+    margin-right: 20px; 
 }
 
 .iconos img {
-    margin-bottom: 10px; /* Ajusta el margen inferior según sea necesario */
+    margin-bottom: 10px; 
+}
+
+/*selector de atributo para etiquetas img con atributo alt*/
+img[alt]:hover {
+    zoom: 105%;
 }
 
 .datos {
@@ -103,6 +119,7 @@ hr{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
     gap: 2em;
+    outline: none;
 }
 
 
@@ -114,22 +131,38 @@ hr{
     background-color: #D9D9D9;
 }
 
-.imagen{
+/*selector de agrupacion de tipos*/
+.imagen, p{
     background-color: #D9D9D9;
 }
 
-p{
+
+
+/*selector adyacente*/
+div + h3{
     background-color: #D9D9D9;
 }
 
-h3{
-    background-color: #D9D9D9;
+/*selector con pseudoelemento*/
+div p:first-of-type {
+    font-weight: 600;
+}
+
+/*selector con pseudoclase (:hover) */
+.datos a:nth-of-type(2):hover {
+    zoom: 105%;
+    text-decoration: underline;
 }
 
 .imagen img{
     width: 22rem;
     height: auto;
     object-fit: fill;
+}
+
+/*selector combinado*/
+.contacto .iconos img {
+    margin-bottom: 10px; 
 }
 
 .footer{
@@ -194,8 +227,6 @@ body{
     ;
 }
 
-
-
 @media screen and (max-width: 780px) {
     body{
         display: grid;
@@ -242,3 +273,4 @@ body{
         display: flex;
     }
 }
+

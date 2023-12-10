@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="signup.css">
 </head>
+
 <body>
     <div class="logo">
-        <img src="Rectangle_9__1_-removebg-preview.png">
+        <img src="../images/signup/Rectangle_9__1_-removebg-preview.png">
     </div>
     <div class="divcentral">
         <div class="marco">
             <h1>
                 Nuevo usuario
             </h1>
-            <div class="contenedorgrid">
-                <form action="../inicio/coches.html">
+            <form action="../inicio/coches.html">
+                <div class="contenedor">
                     <div class="etiquetas">
-                    <label for="nombre">Nombre</label><br>
-                    <input type="text" name="nombre" id="nombre" required>
+                        <label for="nombre">Nombre:</label><br>
+                        <input type="text" name="nombre" id="nombre">
+                    </div>
+                    <div class="etiquetas">
+                        <label for="email">E-mail:</label><br>
+                        <input type="text" name="email" id="email">
+                    </div>
+                    <div class="etiquetas">
+                        <label for="apellidos">Apellidos:</label><br>
+                        <input type="text" name="apellidos" id="apellidos">
+                    </div>
+                    <div class="etiquetas">
+                        <label for="contraseña">Contraseña:</label><br>
+                        <input type="password" name="contraseña" id="contraseña">
+                    </div>
+                    <div class="etiquetas">
+                        <label for="region">Región:</label><br>
+                        <input type="password" name="region" id="region">
+                    </div>
+                    <div class="etiquetas">
+                        <label for="contraseña">Confirmar Contraseña:</label><br>
+                        <input type="text" name="contraseña" id="contraseña">
+                    </div>
                 </div>
-                <div class="etiquetas">
-                    <label for="email">E-mail</label><br>
-                    <input type="text" name="email" id="email" required>
-                </div>
-                <div class="etiquetas">
-                    <label for="apellidos">Apellidos</label><br>
-                    <input type="text" name="apellidos" id="apellidos" required>
-                </div>
-                <div class="etiquetas">
-                    <label for="contraseña">Contraseña</label><br>
-                    <input type="text" name="contraseña" id="contraseña" required>
-                </div>
-                <div class="etiquetas">
-                    <label for="region">Región</label><br>  
-                    <input type="text" name="region" id="region" required>
-                </div>
-                <div class="etiquetas">
-                    <label for="contraseña">Confirmar Contraseña</label><br>  
-                    <input type="text" name="contraseña" id="contraseña " required>
-                </div>
-                    <button class="botonpublicar">Registrarse</button>
-                </form>
-            </div>
+                <button type="submit" class="registrar">Registrarse</button>
+            </form>
         </div>
     </div>
 </body>
+
 </html>
