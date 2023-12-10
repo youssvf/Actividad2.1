@@ -56,6 +56,11 @@ label{
     
 }
 
+.registrar{
+    display: block;
+    margin: 20px auto;
+}
+
 input{
     width: 80%;
     font-size: larger;
@@ -64,15 +69,10 @@ input{
 }
 
 
-
-form button{
-    text-align: center;
-}
-
 button{
     border-radius: 40%;
     border: none;
-    width: 20vw; 
+    width: 22vw; 
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
