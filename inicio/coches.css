@@ -85,8 +85,8 @@ hr{
 }
 
 /*selector de atributo para etiquetas img con atributo alt*/
-img[alt]:hover {
-    zoom: 105%;
+.tarjeta:hover {
+    scale: 1.1;
 }
 
 .datos {
@@ -135,8 +135,6 @@ img[alt]:hover {
 .imagen, p{
     background-color: #D9D9D9;
 }
-
-
 
 /*selector adyacente*/
 div + h3{
