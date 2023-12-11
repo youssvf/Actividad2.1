@@ -84,7 +84,7 @@ hr{
     margin-bottom: 10px; 
 }
 
-/*selector de atributo para etiquetas img con atributo alt*/
+/**/
 .tarjeta:hover {
     scale: 1.1;
 }
