@@ -57,6 +57,7 @@ label{
 }
 
 .registrar{
+    padding: 5px;
     display: block;
     margin: 20px auto;
 }

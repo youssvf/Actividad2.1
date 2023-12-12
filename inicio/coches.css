@@ -84,9 +84,9 @@ hr{
     margin-bottom: 10px; 
 }
 
-/*selector de atributo para etiquetas img con atributo alt*/
-img[alt]:hover {
-    zoom: 105%;
+
+.tarjeta:hover {
+    scale: 1.1;
 }
 
 .datos {
@@ -150,7 +150,7 @@ div p:first-of-type {
 
 /*selector con pseudoclase (:hover) */
 .datos a:nth-of-type(2):hover {
-    zoom: 105%;
+    scale: 1.1;
     text-decoration: underline;
 }
 

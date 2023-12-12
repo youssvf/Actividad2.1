@@ -16,9 +16,7 @@ body{
 
 .logo{
     grid-area: logo;
-    
 }
-
 
 #navmovil{
     grid-area: navmovil;
@@ -77,12 +75,17 @@ img{
     margin: 20px;
 }
 
+#navmovil a:hover {
+    text-decoration: underline;
+}
+
 .upload{
     text-align: center;
 }
 
 .botonpublicar{
     text-align: center;
+    padding: 5px;
 }
 
 label{
