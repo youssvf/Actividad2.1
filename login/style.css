@@ -54,7 +54,6 @@ input {
 button{
     border-radius: 40%;
     border: none;
-    width: 20vw; 
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -69,6 +68,8 @@ button{
 button a{
     text-decoration: none;
 }
+
+
 
 form a{
     color: black;
