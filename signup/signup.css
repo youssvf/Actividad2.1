@@ -4,6 +4,10 @@
     font-family: 'Lexend';
 }
 
+span{
+    color: red;
+}
+
 nav{
     display: flex;
     justify-content: space-between;
