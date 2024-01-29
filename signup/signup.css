@@ -66,6 +66,12 @@ label{
     margin: 20px auto;
 }
 
+.contenedorsubmit{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 input{
     width: 80%;
     font-size: larger;

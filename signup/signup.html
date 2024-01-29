@@ -27,7 +27,8 @@
                     </div>
                     <div class="etiquetas">
                         <label for="email">E-mail:</label><br>
-                        <input type="text" name="email" id="email">
+                        <input type="text" name="email" id="email"><br>
+                        <span id="erroremail"></span>
                     </div>
                     <div class="etiquetas">
                         <label for="apellidos">Apellidos:</label><br>
@@ -36,19 +37,23 @@
                     </div>
                     <div class="etiquetas">
                         <label for="contraseña">Contraseña:</label><br>
-                        <input type="password" name="contraseña" id="contraseña">
+                        <input type="password" name="contraseña" id="contraseña"><br>
+                        <span id="errorcontraseña"></span>
                     </div>
                     <div class="etiquetas">
                         <label for="usuario">Usuario:</label><br>
-                        <input type="text" name="usuario" id="usuario">
+                        <input type="text" name="usuario" id="usuario"><br>
+                        <span id="errorusuario"></span>
                     </div>
                     <div class="etiquetas">
-                        <label for="contraseña">Confirmar Contraseña:</label><br>
-                        <input type="text" name="contraseña" id="repitecontraseña">
+                        <label for="contraseñarepe">Confirmar Contraseña:</label><br>
+                        <input type="password" name="contraseñarepe" id="contraseñarepe"><br>
+                        <span id="errorcontraseñarepe"></span>
                     </div>
                 </div>
-                <div>
-                    <button type="submit" class="registrar">Registrarse</button>
+                <div class="contenedorsubmit">
+                    <button id="registrar" class="registrar">Registrarse</button><br>
+                    <span id="errorForm"></span>
                 </div>
             </form>
         </div>
