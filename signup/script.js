@@ -1,3 +1,7 @@
+const rutaUsers ='18.214.150.84:3000/usuarios';
+const rutaProducts = '18.214.150.84:3000/coches';
+
+
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("nombre").addEventListener("blur", validarNombre);
   document.getElementById('apellidos').addEventListener('blur',validarApellidos);
@@ -5,7 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById('contraseña').addEventListener('blur',validarContraseña);
   document.getElementById('contraseñarepe').addEventListener('blur',validarContraseñaRepetida);
   document.getElementById('email').addEventListener('blur',validarEmail);
-  document.getElementById('registrar').addEventListener('click',validarFormulario);
+  document.getElementById('formulario').addEventListener('submit',validarFormulario);
+  document.getElementById('registrar').addEventListener('click',post);
 });
 
 function registrar(e) {}
@@ -146,10 +151,45 @@ function validarFormulario(e){
       return false;
   }   else {
       span.innerText='';
+      post();
+      window.location.href="../inicio/coches.html";
   }
 }
 
-function redirigir(e){
-  const boton = document.getElementById('registrar');
-  boton.href=''
+
+async function post() {
+  const usuario = {
+    nombre: document.getElementById("nombre").value,
+    apellidos: document.getElementById("apellidos").value,
+    usuario: document.getElementById("usuario").value,
+    password: document.getElementById("contraseña").value,
+    email: document.getElementById("email").value,
+    news: false
+  };
+
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json;charset=utf-8",
+    },
+    body: JSON.stringify(usuario),
+  };
+
+  try {
+    let response = await fetch(rutaUsers, options);
+    if(response.ok){
+      try {
+        let data = response.json();
+        console.log(data);
+      } catch (error) {
+        console.error('error de parseo');
+      }
+    } else {
+      console.log(response.status());
+    }
+  } catch (error) {
+    console.error('Error de petición')
+  }
 }
+
+
