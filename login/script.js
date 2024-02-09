@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 })
 
 async function login(e){
-    e.preventDefault();
+    // e.preventDefault();
 
     const username = document.getElementById('email').value;
     const contraseña = document.getElementById('contraseña').value;
