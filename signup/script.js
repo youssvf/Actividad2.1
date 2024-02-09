@@ -21,12 +21,12 @@ function validarNombre(e){
 
   if(input.value.length === 0){
       span.innerText='Campo obligatorio';
+      span.focus();
       return false;
   } else {
       span.innerText='';
       input.value = transformarNombre(input.value);
       return true;
-  
   }
 }
 
@@ -42,6 +42,7 @@ function validarApellidos(e){
 
   if(input.value.length<3){
       span.innerText='Longitud mínima de 3';
+      span.focus();
       return false;
   } else {
       span.innerText='';
@@ -62,6 +63,7 @@ function validarUsuario(e){
 
   if(input.value.length===0){
       span.innerText='Campo obligatorio';
+      span.focus();
       return false;
   } else {
       span.innerText='';
@@ -86,6 +88,7 @@ function validarContraseña(e){
 
   if(!patron.test(input.value)){
       span.innerText='Contraseña no segura';
+      span.focus();
       return false;
   } else {
       span.innerText='';
@@ -101,6 +104,7 @@ function validarContraseñaRepetida(e){
 
   if(contraseña !== contraseñarepe){
       span.innerText='Las contraseñas no coinciden';
+      span.focus();
       return false;
   } else {
       span.innerText='';
@@ -117,9 +121,11 @@ function validarEmail(e) {
 
   if (input.value === 0) {
     span.innerText = "Campo obligatorio";
+    span.focus();
     return false;
   } else if (!patron.test(input.value)) {
     span.innerText = "E-mail inválido";
+    span.focus();
     return false;
   } else {
     span.innerText = "";
@@ -133,6 +139,7 @@ function validarFormulario(e){
 
   if(!validarNombre(e)){
       span.innerText='Revisar nombre';
+      // document.getElementById('errornombre').focus();
       return false;
   } else if(!validarApellidos(e)){
       span.innerText='Revisar apellido';
