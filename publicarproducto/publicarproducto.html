@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
     <link rel="stylesheet" href="publicar.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
-      </style>
+    </style>
+    <script src="script.js"></script>
 </head>
+
 <body>
     <div class="logo">
         <img src="../images/inicio/Rectangle_9__1_-removebg-preview.png">
@@ -16,7 +19,7 @@
     <div id="navmovil">
         <a href="../inicio/coches.html">Inicio</a>
         <a href="../publicarproducto/publicarproducto.html" style="text-decoration:underline;">Publicar Producto</a>
-        <a href="../login/index.html">Cerrar Sesión</a>
+        <a href="../login/index.html" id="cerrarsesion">Cerrar Sesión</a>
         <div class="usuario">
             <img src="../images/inicio/user-regular (1) 1.png">
             <br>
@@ -29,62 +32,54 @@
                 Nuevo producto
             </h1>
             <form id="formulario" action="../inicio/coches.html">
-                <div class="contenedorgrid"> 
-                <div class="etiquetas">
-                    <label for="marcas">Marca</label><br>
-                    <select name="marcas" id="marcas">
-                        <option value="Mercedes">Mercedes</option>
-                        <option value="Audi">Audi</option>
-                        <option value="BMW">BMW</option>
-                    </select>
+                <div class="contenedorgrid">
+                    <div class="etiquetas">
+                        <label for="marca">Marca</label><br>
+                        <input type="text" id="marca" name="marca">
+                    </div>
+                    <div class="etiquetas">
+                        <label for="modelo">Modelo</label><br>
+                        <input type="text" name="modelo" id="modelo">
+                    </div>
+                    <div class="etiquetas">
+                        <label for="KM">KM</label><br>
+                        <input type="text" name="km" id="km">
+                    </div>
+                    <div class="etiquetas">
+                        <label for="años">Año de fabricación</label>
+                        <input type="text" name="años" id="años">
+                    </div>
+                    <div class="etiquetas">
+                        <label for="años">Motorización</label><br>
+                        <select name="Motorización" id="Motorización">
+                            <option value="Gasolina">Gasolina</option>
+                            <option value="Diesel">Diesel</option>
+                            <option value="Eléctrico">Eléctrico</option>
+                            <option value="Híbrido">Híbrido</option>
+                        </select>
+                    </div>
+                    <div class="etiquetas">
+                        <label for="precio">Precio</label><br>
+                        <input type="text" name="precio" id="precio">
+                    </div>
+                    <div class="upload">
+                        <label for="imagen1" class="button subirimagen">
+                            <input type="file" name="imagen1" id="imagen1" style="display: none;">
+                        </label>
+
+                        <label for="imagen2" class="button2 subirimagen2">
+                            <input type="file" name="imagen2" id="imagen2" style="display: none;">
+                        </label>
+                    </div>
+
                 </div>
-                <div class="etiquetas">
-                    <label for="modelos">Modelo</label><br>
-                    <select name="modelos" id="modelos">
-                        <option value="Modelo 1">Modelo 1</option>
-                        <option value="MOdelo 2">Modelo 2</option>
-                    </select>
+                <div class="botonpublicar">
+                    <button type="submit" class="botonpublicar">Publicar</button>
                 </div>
-                <div class="etiquetas">
-                    <label for="KM">KM</label><br>
-                    <select name="KM" id="KM">
-                        <option value="Modelo 1">5000</option>
-                        <option value="MOdelo 2">10000</option>
-                    </select>
-                </div>
-                <div class="etiquetas">
-                    <label for="años">Año de fabricación</label>
-                    <select name="años" id="años">
-                        <option value="Modelo 1">2023</option>
-                        <option value="MOdelo 2">2022</option>
-                    </select>
-                </div>
-                <div class="etiquetas">
-                    <label for="años">Motorización</label><br>
-                    <select name="Motorización" id="Motorización">
-                        <option value="Gasolina">Gasolina</option>
-                        <option value="Diesel">Diesel</option>
-                        <option value="Eléctrico">Eléctrico</option>
-                        <option value="Híbrido">Híbrido</option>
-                    </select>
-                </div>
-                <div class="upload">
-                    <label for="imagen1" class="button subirimagen">
-                        <input type="file" name="imagen1" id="imagen1" style="display: none;">
-                    </label>
-                
-                    <label for="imagen2" class="button2 subirimagen2">
-                        <input type="file" name="imagen2" id="imagen2" style="display: none;">
-                    </label>
-                </div>
-                
-            </div>
-            <div class="botonpublicar">
-                <button type="submit" class="botonpublicar">Publicar</button>
-            </div>
             </form>
-            
+
         </div>
     </div>
 </body>
+
 </html>

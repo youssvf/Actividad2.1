@@ -1,0 +1,22 @@
+{
+  "usuarios": [
+    {
+      "nombre": "Youssef",
+      "apellidos": "El Ahmar",
+      "email": "youssvf@example.com",
+      "usuario": "youssvf",
+      "contraseña": "123456"
+    }
+  ],
+  "coches": [
+    {
+      "marca": "Mercedes",
+      "modelo": "G63",
+      "kilometros": 50000,
+      "año_fabricacion": 2020,
+      "motorizacion": "Gasolina",
+      "precio": 40000,
+      "imagen": "https://s3.amazonaws.com/bucketactividad2.1/mercedes.jpeg"
+    }
+  ]
+}

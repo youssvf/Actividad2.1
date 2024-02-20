@@ -92,7 +92,7 @@ label{
     font-size: larger;
 }
 
-select{
+select, input{
     width: 80%;
     font-size: larger;
     border-radius: 20px;
