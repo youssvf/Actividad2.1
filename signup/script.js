@@ -100,7 +100,10 @@ function validarContraseñaRepetida(e){
   const contraseñarepe = document.getElementById('contraseñarepe').value;
   const span = document.getElementById('errorcontraseñarepe');
 
-  if(contraseña !== contraseñarepe){
+  if(contraseñarepe.length === 0){
+    span.innerText='Vuelva a introducir la contraseña';
+    return false;
+  } else if(contraseña !== contraseñarepe){
       span.innerText='Las contraseñas no coinciden';
       span.focus();
       return false;
