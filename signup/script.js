@@ -1,4 +1,4 @@
-const rutaUsers ='18.214.150.84:3000/usuarios';
+const rutaUsers ='http://18.214.150.84:3000/usuarios';
 const rutaProducts = '18.214.150.84:3000/coches';
 
 
@@ -9,8 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById('contraseña').addEventListener('blur',validarContraseña);
   document.getElementById('contraseñarepe').addEventListener('blur',validarContraseñaRepetida);
   document.getElementById('email').addEventListener('blur',validarEmail);
-  document.getElementById('formulario').addEventListener('submit',validarFormulario);
-  document.getElementById('registrar').addEventListener('click',post);
+  document.getElementById('formulario').addEventListener('submit',registrarUsuario);
 });
 
 function registrar(e) {}
@@ -21,7 +20,6 @@ function validarNombre(e){
 
   if(input.value.length === 0){
       span.innerText='Campo obligatorio';
-      span.focus();
       return false;
   } else {
       span.innerText='';
@@ -139,7 +137,7 @@ function validarFormulario(e){
 
   if(!validarNombre(e)){
       span.innerText='Revisar nombre';
-      // document.getElementById('errornombre').focus();
+      document.getElementById('errornombre').focus();
       return false;
   } else if(!validarApellidos(e)){
       span.innerText='Revisar apellido';
@@ -158,8 +156,9 @@ function validarFormulario(e){
       return false;
   }   else {
       span.innerText='';
-      post();
-      window.location.href="../inicio/coches.html";
+      registrarUsuario();
+      // post();
+      // window.location.href="../inicio/coches.html";
   }
 }
 
@@ -199,4 +198,30 @@ async function post() {
   }
 }
 
+
+function registrarUsuario(e){
+  e.preventDefault();
+  const usuario = {
+    nombre: document.getElementById("nombre").value,
+    email: document.getElementById("email").value,
+    apellidos: document.getElementById("apellidos").value,
+    password: document.getElementById("contraseña").value,
+    usuario: document.getElementById("usuario").value,
+  };
+
+  const options = {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify(usuario),
+}
+
+  fetch(rutaUsers,options)
+  .then(res => {
+    if(res.ok){
+      window.location.href="../inicio/coches.html";
+      localStorage.setItem('sesionIniciada',JSON.stringify(usuario))
+    }
+  })
+  .catch(error => {console.error('Error: ', error)});
+}
 

@@ -1,11 +1,13 @@
+
 {
   "usuarios": [
     {
-      "nombre": "Youssef",
-      "apellidos": "El Ahmar",
-      "email": "youssvf@example.com",
-      "usuario": "youssvf",
-      "contraseña": "123456"
+      "nombre": "Pablo",
+      "email": "pbarrabes@gmail.com",
+      "apellidos": "Barrabes",
+      "password": "Contraseña7",
+      "usuario": "pbarrabes",
+      "id": 4
     }
   ],
   "coches": [
@@ -16,7 +18,20 @@
       "año_fabricacion": 2020,
       "motorizacion": "Gasolina",
       "precio": 40000,
-      "imagen": "https://s3.amazonaws.com/bucketactividad2.1/mercedes.jpeg"
+      "imagen": "https://s3.amazonaws.com/bucketactividad2.1/mercedes.jpeg",
+      "id": 1
+    },
+    {
+      "marca": "Audi",
+      "modelo": "RS6",
+      "km": "20000",
+      "año": "2023",
+      "precio": "70000",
+      "motorizacion": "Gasolina",
+      "imagen": "https://s3.amazonaws.com/bucketactividad2.1/mercedes.jpeg",
+      "id": 2
     }
   ]
 }
+
+

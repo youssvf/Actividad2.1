@@ -1,38 +1,35 @@
-const ruta ='http://18.214.150.84:3000/usuarios';
+const ruta = "http://18.214.150.84:3000/usuarios";
 
-document.addEventListener('DOMContentLoaded',()=>{
-    document.getElementById('iniciar').addEventListener('click',login);
-})
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("iniciar").addEventListener("click", login);
+});
 
-async function login(e){
+async function login(e) {
     // e.preventDefault();
 
-    const username = document.getElementById('email').value;
-    const contraseña = document.getElementById('contraseña').value;
+    const username = document.getElementById("email").value;
+    const contraseña = document.getElementById("contraseña").value;
     const span = document.getElementById("errorlogin");
 
-    let response = await fetch(ruta+`?email=${username}&&password=${contraseña}`);
-    if(response.ok){
-        let usuario = await response.json();
-        if(usuario.length > 0){
-            console.log(usuario);
-            if(contraseña ===  usuario[0]["contraseña"]){
-                guardarSesion(usuario);
-                span.innerText='';
-                window.location.href="../inicio/coches.html";
-                return true;
+    e.preventDefault();
+    fetch(ruta + "?email_like=" + username)
+        .then((res) => res.json())
+        .then((data) => {
+            if (data.length > 0) {
+                if (data[0].password === contraseña) {
+                    localStorage.setItem("sesionIniciada", JSON.stringify(data[0].nombre));
+                    span.innerText='';
+                    window.location.href="../index.html";
                 } else {
-                span.innerText='Datos incorrectos.'
-                return false;
+                    span.innerText='Datos incorrectos';
+                }
+            } else {
+                span.innerText='Datos incorrectos';
             }
-        } else {
-            span.innerText='Datos incorrectos';
-        }
-    } else {
-        console.error('código de error: ', response.status);
-    }
+        })
+        .catch((error) => {
+            console.error("Error: ", error);
+        });
 }
 
-function guardarSesion(usuario){
-    sessionStorage.setItem('sesionIniciada', JSON.stringify(usuario));
-}
+
