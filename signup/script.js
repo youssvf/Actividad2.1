@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById('contraseña').addEventListener('blur',validarContraseña);
   document.getElementById('contraseñarepe').addEventListener('blur',validarContraseñaRepetida);
   document.getElementById('email').addEventListener('blur',validarEmail);
-  document.getElementById('formulario').addEventListener('submit',registrarUsuario);
+  document.getElementById('formulario').addEventListener('submit',validarFormulario);
 });
 
 function registrar(e) {}
@@ -156,47 +156,12 @@ function validarFormulario(e){
       return false;
   }   else {
       span.innerText='';
-      registrarUsuario();
-      // post();
-      // window.location.href="../inicio/coches.html";
+      registrarUsuario(e);
   }
 }
 
 
-async function post() {
-  const usuario = {
-    nombre: document.getElementById("nombre").value,
-    apellidos: document.getElementById("apellidos").value,
-    usuario: document.getElementById("usuario").value,
-    password: document.getElementById("contraseña").value,
-    email: document.getElementById("email").value,
-    news: false
-  };
 
-  const options = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json;charset=utf-8",
-    },
-    body: JSON.stringify(usuario),
-  };
-
-  try {
-    let response = await fetch(rutaUsers, options);
-    if(response.ok){
-      try {
-        let data = response.json();
-        console.log(data);
-      } catch (error) {
-        console.error('error de parseo');
-      }
-    } else {
-      console.log(response.status());
-    }
-  } catch (error) {
-    console.error('Error de petición')
-  }
-}
 
 
 function registrarUsuario(e){
@@ -218,8 +183,8 @@ function registrarUsuario(e){
   fetch(rutaUsers,options)
   .then(res => {
     if(res.ok){
-      window.location.href="../inicio/coches.html";
-      localStorage.setItem('sesionIniciada',JSON.stringify(usuario))
+      window.location.href="../index.html";
+      localStorage.setItem('sesionIniciada',JSON.stringify(usuario.nombre))
     }
   })
   .catch(error => {console.error('Error: ', error)});
